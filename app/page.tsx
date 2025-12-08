@@ -341,19 +341,19 @@ export default function Home() {
       <section className="py-16 md:py-24 bg-primary-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Prøv AquaEnergy AI gratis i 30 dager
+            Vi søker pilot kunder
           </h2>
           <p className="text-xl text-primary-100 mb-8">
             Motta komplett installasjonspakke og dashboard klar til bruk.
           </p>
           <p className="text-lg text-white mb-8 font-semibold">
-            Ingen forpliktelser – du betaler kun hvis du sparer strøm.
+            Perfekt mulighet for å teste løsningen i ditt anlegg.
           </p>
           <Link
             href="#contact"
             className="inline-block bg-white text-primary-600 px-10 py-5 rounded-lg font-bold hover:bg-gray-50 transition-colors text-lg shadow-xl"
           >
-            Start gratis pilot
+            Bli pilot kunde
           </Link>
         </div>
       </section>
