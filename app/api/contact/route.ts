@@ -108,7 +108,7 @@ ${new Date().toLocaleString('no-NO')}
       await resend.emails.send({
         from: 'AquaEnergy AI <onboarding@resend.dev>', // Du kan endre dette når du verifiserer ditt domene
         to: ['info@aquaenergy.com', 'Remi.lie@aquaenergy.com'],
-        replyTo: email,
+        reply_to: email,
         subject: `Ny forespørsel fra ${company} - AquaEnergy AI`,
         html: htmlContent,
         text: textContent,
