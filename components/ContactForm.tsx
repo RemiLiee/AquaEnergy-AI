@@ -12,21 +12,45 @@ export default function ContactForm() {
     comment: '',
   });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real app, this would send to an API
-    console.log('Form submitted:', formData);
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 5000);
-    setFormData({ 
-      company: '', 
-      contactPerson: '', 
-      email: '', 
-      phone: '', 
-      facilityType: '', 
-      comment: '' 
-    });
+    setLoading(true);
+    setError(null);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitted(true);
+        setTimeout(() => setSubmitted(false), 5000);
+        setFormData({ 
+          company: '', 
+          contactPerson: '', 
+          email: '', 
+          phone: '', 
+          facilityType: '', 
+          comment: '' 
+        });
+      } else {
+        setError(data.error || 'Kunne ikke sende forespørsel. Prøv igjen senere.');
+      }
+    } catch (err) {
+      console.error('Error submitting form:', err);
+      setError('Kunne ikke sende forespørsel. Prøv igjen senere.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -48,6 +72,12 @@ export default function ContactForm() {
           <p className="text-sm">Vi tar kontakt med deg så snart som mulig.</p>
         </div>
       ) : (
+        <>
+          {error && (
+            <div className="bg-red-50 border border-red-200 text-red-800 p-4 rounded-lg mb-6">
+              <p className="text-sm">{error}</p>
+            </div>
+          )}
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
@@ -143,11 +173,13 @@ export default function ContactForm() {
           </div>
           <button
             type="submit"
-            className="w-full bg-primary-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-primary-700 transition-colors"
+            disabled={loading}
+            className="w-full bg-primary-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-primary-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            Send forespørsel
+            {loading ? 'Sender...' : 'Send forespørsel'}
           </button>
         </form>
+        </>
       )}
     </div>
   );
