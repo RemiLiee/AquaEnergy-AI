@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Chatbot from "@/components/Chatbot";
+import CookieBanner from "@/components/CookieBanner";
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import Script from 'next/script';
@@ -68,9 +69,19 @@ export default function RootLayout({
   return (
     <html lang="no">
       <body className="min-h-screen flex flex-col">
-        {/* Google Analytics */}
+        {/* Google Analytics - Consent Mode */}
         {process.env.NEXT_PUBLIC_GA_ID && (
           <>
+            <Script id="google-analytics-consent" strategy="beforeInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('consent', 'default', {
+                  'analytics_storage': 'denied',
+                  'ad_storage': 'denied'
+                });
+              `}
+            </Script>
             <Script
               src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
               strategy="afterInteractive"
@@ -80,7 +91,9 @@ export default function RootLayout({
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
-                gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
+                gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', {
+                  'anonymize_ip': true
+                });
               `}
             </Script>
           </>
@@ -89,6 +102,7 @@ export default function RootLayout({
         <main className="flex-grow">{children}</main>
         <Footer />
         <Chatbot />
+        <CookieBanner />
         <Analytics />
         <SpeedInsights />
       </body>
