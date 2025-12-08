@@ -8,10 +8,10 @@ export const dynamic = 'force-dynamic';
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { siteId: string } }
+  { params }: { params: Promise<{ siteId: string }> }
 ) {
   try {
-    const siteId = params.siteId;
+    const { siteId } = await params;
 
     if (USE_MOCK) {
       // Return mock data
@@ -97,7 +97,7 @@ export async function GET(
       {
         success: false,
         error: 'Failed to fetch site data',
-        site_id: params.siteId,
+        site_id: (await params).siteId,
       },
       { status: 500 }
     );
