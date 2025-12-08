@@ -55,17 +55,17 @@ export default function Home() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/80 to-white/90"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-white/50 to-white/70"></div>
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight drop-shadow-lg">
               AI som senker energikostnadene i oppdrett – automatisk
             </h1>
-            <p className="text-xl sm:text-2xl text-gray-700 mb-10 max-w-3xl mx-auto font-medium leading-relaxed">
+            <p className="text-xl sm:text-2xl text-gray-800 mb-10 max-w-3xl mx-auto font-medium leading-relaxed drop-shadow-md">
               Spar 10–30 % strøm med sanntidsdata og intelligente anbefalinger som optimaliserer pumper, oksygensystemer og vannstrøm.
             </p>
-            <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-700 mb-8 max-w-2xl mx-auto drop-shadow-sm">
               Mer kontroll. Mindre kostnader. Bedre fiskevelferd.
             </p>
             <Link
