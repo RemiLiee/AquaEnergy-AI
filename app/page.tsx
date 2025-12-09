@@ -39,23 +39,21 @@ export default function Home() {
   };
 
   return (
-    <div>
+    <div className="bg-white">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       
       {/* Hero Section - med bølgebilde */}
-      <section className="relative py-20 md:py-32 lg:py-40 overflow-hidden min-h-[600px]">
+      <section className="relative py-20 md:py-32 lg:py-40 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?q=100&w=1920&auto=format&fit=crop"
+            src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?q=80&w=1920"
             alt="Akvakultur anlegg med bølger"
             fill
             className="object-cover"
             priority
-            quality={100}
-            unoptimized={false}
           />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
