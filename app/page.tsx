@@ -46,7 +46,7 @@ export default function Home() {
       />
       
       {/* Hero Section - med bølgebilde */}
-      <section className="relative py-20 md:py-32 lg:py-40 overflow-hidden min-h-[70vh] w-full" style={{ position: 'relative' }}>
+      <section className="relative py-20 md:py-32 lg:py-40 overflow-hidden min-h-[70vh] w-full" style={{ position: 'relative', backgroundColor: 'transparent' }}>
         <div 
           className="absolute inset-0 w-full h-full"
           style={{ 
@@ -55,7 +55,8 @@ export default function Home() {
             top: 0,
             left: 0,
             right: 0,
-            bottom: 0
+            bottom: 0,
+            backgroundColor: 'transparent'
           }}
         >
           <img
@@ -69,7 +70,9 @@ export default function Home() {
               width: '100%',
               height: '100%',
               objectFit: 'cover',
-              zIndex: 0
+              zIndex: 0,
+              opacity: 1,
+              filter: 'brightness(1)'
             }}
           />
         </div>
