@@ -14,7 +14,7 @@ export default function PersonvernPage() {
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Innledning</h2>
             <p className="text-gray-700 mb-4">
-              AquaEnergy AI ("vi", "oss", "vår") respekterer ditt personvern og er forpliktet til å beskytte dine personopplysninger. 
+              AquaEnergy AI (&ldquo;vi&rdquo;, &ldquo;oss&rdquo;, &ldquo;vår&rdquo;) respekterer ditt personvern og er forpliktet til å beskytte dine personopplysninger. 
               Denne personvernpolicyn forklarer hvordan vi samler inn, bruker, deler og beskytter dine personopplysninger når du bruker vår nettside.
             </p>
           </section>

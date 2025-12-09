@@ -47,10 +47,11 @@ export default function Home() {
       
       {/* Hero Section - med bølgebilde */}
       <section className="relative py-20 md:py-32 lg:py-40 overflow-hidden min-h-[70vh] w-full">
-        <img
+        <Image
           src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?q=80&w=1920"
           alt="Akvakultur anlegg med bølger"
-          className="absolute inset-0 w-full h-full object-cover"
+          fill
+          className="object-cover"
           style={{ 
             backgroundSize: 'cover',
             backgroundPosition: 'center',
@@ -58,6 +59,7 @@ export default function Home() {
             opacity: 1,
             zIndex: 0
           }}
+          priority
         />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto">
@@ -283,31 +285,31 @@ export default function Home() {
             <div className="bg-white rounded-xl p-8 shadow-lg">
               <h3 className="text-xl font-bold text-primary-600 mb-4">Stabil overvåkning</h3>
               <p className="text-gray-700 italic">
-                "Sensorene gir kontinuerlig innsikt i pumpenes drift, slik at man får bedre kontroll på energibruken uten manuell oppfølging."
+                &ldquo;Sensorene gir kontinuerlig innsikt i pumpenes drift, slik at man får bedre kontroll på energibruken uten manuell oppfølging.&rdquo;
               </p>
             </div>
             <div className="bg-white rounded-xl p-8 shadow-lg">
               <h3 className="text-xl font-bold text-primary-600 mb-4">Rask igangkjøring</h3>
               <p className="text-gray-700 italic">
-                "Systemet er enkelt å sette opp, og kan tas i bruk samme dag."
+                &ldquo;Systemet er enkelt å sette opp, og kan tas i bruk samme dag.&rdquo;
               </p>
             </div>
             <div className="bg-white rounded-xl p-8 shadow-lg">
               <h3 className="text-xl font-bold text-primary-600 mb-4">Smartere drift med Dashboard</h3>
               <p className="text-gray-700 italic">
-                "Dashboardet gir full oversikt over pumpene, slik at man kan tilpasse driften etter behov og bruke energi mer effektivt."
+                &ldquo;Dashboardet gir full oversikt over pumpene, slik at man kan tilpasse driften etter behov og bruke energi mer effektivt.&rdquo;
               </p>
             </div>
             <div className="bg-white rounded-xl p-8 shadow-lg">
               <h3 className="text-xl font-bold text-primary-600 mb-4">Samlet kontroll på ett sted</h3>
               <p className="text-gray-700 italic">
-                "Alle enheter kan overvåkes samlet i ett system, noe som gjør det enklere å ta beslutninger for hele driften."
+                &ldquo;Alle enheter kan overvåkes samlet i ett system, noe som gjør det enklere å ta beslutninger for hele driften.&rdquo;
               </p>
             </div>
             <div className="bg-white rounded-xl p-8 shadow-lg">
               <h3 className="text-xl font-bold text-primary-600 mb-4">Mulighet for kostnadsbesparelser</h3>
               <p className="text-gray-700 italic">
-                "Ved å følge med på energiforbruket og justere pumpene etter behov, kan man redusere unødvendig bruk og spare penger."
+                &ldquo;Ved å følge med på energiforbruket og justere pumpene etter behov, kan man redusere unødvendig bruk og spare penger.&rdquo;
               </p>
             </div>
           </div>
