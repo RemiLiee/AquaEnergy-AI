@@ -4,11 +4,11 @@ import ROIChart from '@/components/ROIChart';
 
 export const metadata: Metadata = {
   title: 'Energibesparelser',
-  description: 'Reduser energiforbruket med 10-30% gjennom intelligent overvåkning og optimalisering med Blusense AI. Beregn potensielle besparelser for ditt industrianlegg.',
+  description: 'Reduser energiforbruket med 20-40% årlig gjennom intelligent overvåkning og optimalisering med AquaEnergy AI. Beregn potensielle besparelser for ditt industrianlegg.',
   keywords: ['energibesparelse', 'energireduksjon', 'ROI', 'energikostnader', 'industrianlegg', 'energioptimalisering'],
   openGraph: {
-    title: 'Energibesparelser med Blusense AI',
-    description: 'Reduser energiforbruket med 10-30% gjennom intelligent overvåkning og optimalisering',
+    title: 'Energibesparelser med AquaEnergy AI',
+    description: 'Reduser energiforbruket med 20-40% årlig gjennom intelligent overvåkning og optimalisering',
   },
 };
 
@@ -20,10 +20,10 @@ export default function SavingsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Energibesparelser med Blusense AI
+              Energibesparelser med AquaEnergy AI
             </h1>
             <p className="text-xl md:text-2xl text-primary-100 mb-8">
-              Reduser energiforbruket med 10-30% gjennom intelligent overvåkning og optimalisering
+              Reduser energiforbruket med 20-40% årlig gjennom intelligent overvåkning og optimalisering
             </p>
           </div>
         </div>
@@ -94,7 +94,7 @@ export default function SavingsPage() {
             <div className="text-center bg-primary-600 rounded-xl p-12 text-white">
               <h3 className="text-3xl font-bold mb-4">Klar til å starte?</h3>
               <p className="text-xl text-primary-100 mb-8">
-                Book en gratis pilot og se hvordan Blusense AI kan redusere energiforbruket ditt
+                Book en gratis pilot og se hvordan AquaEnergy AI kan redusere energiforbruket ditt
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Link

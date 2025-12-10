@@ -1,4 +1,4 @@
-# Blusense AI
+# AquaEnergy AI
 
 Plug & Play sensorpakker + AI for energibesparelse i industrianlegg. Sanntids overvåking og optimalisering for energibesparelse.
 
@@ -79,7 +79,7 @@ npm start
 ## 📁 Project Structure
 
 ```
-blusense-ai/
+aquaenergy-ai/
 ├── app/
 │   ├── api/
 │   │   └── ingest/        # IoT sensor data endpoint
@@ -137,7 +137,7 @@ Prosjektet er klart for Vercel deployment uten ekstra konfigurasjon.
 
 ## 📧 Kontakt
 
-post@blusense.com
+post@aquaenergyai.com
 
 ## 📄 Lisens
 

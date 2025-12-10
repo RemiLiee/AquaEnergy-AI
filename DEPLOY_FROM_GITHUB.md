@@ -62,3 +62,4 @@ Hvis deployment feiler:
 3. Sjekk at alle environment variables er satt
 4. Sjekk at GitHub repository er riktig koblet
 
+

@@ -1,4 +1,4 @@
-// Predictive Maintenance System for Blusense AI
+// Predictive Maintenance System for AquaEnergy AI
 
 export interface MaintenanceAlert {
   id: string;

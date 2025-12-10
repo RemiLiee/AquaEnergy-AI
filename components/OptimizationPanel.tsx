@@ -21,7 +21,12 @@ interface OptimizationData {
   };
 }
 
-export default function OptimizationPanel() {
+interface OptimizationPanelProps {
+  onImplementAction?: (recommendation: OptimizationRecommendation) => void;
+  implementedActions?: string[];
+}
+
+export default function OptimizationPanel({ onImplementAction, implementedActions = [] }: OptimizationPanelProps) {
   const [data, setData] = useState<OptimizationData | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -103,29 +108,50 @@ export default function OptimizationPanel() {
           <p className="text-gray-500">Ingen anbefalinger for øyeblikket. Systemet kjører optimalt!</p>
         ) : (
           <div className="space-y-4">
-            {data.recommendations.map((rec) => (
-              <div
-                key={rec.id}
-                className={`border-2 rounded-lg p-4 ${getPriorityColor(rec.priority)}`}
-              >
-                <div className="flex justify-between items-start mb-2">
-                  <h3 className="font-semibold text-lg">{rec.title}</h3>
-                  <span className="text-xs font-semibold px-2 py-1 rounded-full bg-white/50">
-                    {rec.priority === 'high' ? 'Høy prioritet' : rec.priority === 'medium' ? 'Middels' : 'Lav'}
-                  </span>
-                </div>
-                <p className="text-sm mb-3 opacity-90">{rec.description}</p>
-                <div className="bg-white/50 rounded p-3 mb-2">
-                  <div className="text-xs font-semibold mb-1">Anbefalt handling:</div>
-                  <div className="text-sm">{rec.action}</div>
-                </div>
-                {rec.potentialSavings > 0 && (
-                  <div className="text-sm font-semibold">
-                    💰 Potensiell besparelse: {rec.potentialSavings}% | {rec.estimatedImpact}
+            {data.recommendations.slice(0, 3).map((rec) => {
+              const isImplemented = implementedActions.includes(rec.id);
+              return (
+                <div
+                  key={rec.id}
+                  className={`border-2 rounded-lg p-4 ${getPriorityColor(rec.priority)}`}
+                >
+                  <div className="flex justify-between items-start mb-2">
+                    <h3 className="font-semibold text-lg">{rec.title}</h3>
+                    <span className="text-xs font-semibold px-2 py-1 rounded-full bg-white/50">
+                      {rec.priority === 'high' ? 'Høy prioritet' : rec.priority === 'medium' ? 'Middels' : 'Lav'}
+                    </span>
                   </div>
-                )}
+                  <p className="text-sm mb-3 opacity-90">{rec.description}</p>
+                  <div className="bg-white/50 rounded p-3 mb-2">
+                    <div className="text-xs font-semibold mb-1">Anbefalt handling:</div>
+                    <div className="text-sm">{rec.action}</div>
+                  </div>
+                  {rec.potentialSavings > 0 && (
+                    <div className="text-sm font-semibold mb-2">
+                      💰 Potensiell besparelse: {rec.potentialSavings}% | {rec.estimatedImpact}
+                    </div>
+                  )}
+                  {onImplementAction && !isImplemented && (
+                    <button
+                      onClick={() => onImplementAction(rec)}
+                      className="w-full mt-2 bg-primary-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-primary-700 transition-colors text-sm"
+                    >
+                      ✅ Marker som implementert
+                    </button>
+                  )}
+                  {isImplemented && (
+                    <div className="w-full mt-2 bg-green-100 text-green-800 px-4 py-2 rounded-lg font-semibold text-center text-sm border border-green-300">
+                      ✓ Implementert
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+            {data.recommendations.length > 3 && (
+              <div className="text-center text-sm text-gray-600 pt-2">
+                + {data.recommendations.length - 3} flere anbefalinger nedenfor
               </div>
-            ))}
+            )}
           </div>
         )}
       </div>

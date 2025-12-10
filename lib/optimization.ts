@@ -1,4 +1,4 @@
-// AI Optimization Engine for Blusense AI
+// AI Optimization Engine for AquaEnergy AI
 // Analyzes sensor data and provides recommendations to save energy
 
 export interface SensorData {

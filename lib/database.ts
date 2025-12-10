@@ -1,4 +1,4 @@
-// Database interface for Blusense AI
+// Database interface for AquaEnergy AI
 // This can be connected to Supabase, PostgreSQL, MongoDB, etc.
 
 export interface SensorReading {

@@ -14,7 +14,7 @@ export default function PersonvernPage() {
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Innledning</h2>
             <p className="text-gray-700 mb-4">
-              Blusense AI (&ldquo;vi&rdquo;, &ldquo;oss&rdquo;, &ldquo;vår&rdquo;) respekterer ditt personvern og er forpliktet til å beskytte dine personopplysninger. 
+              AquaEnergy AI (&ldquo;vi&rdquo;, &ldquo;oss&rdquo;, &ldquo;vår&rdquo;) respekterer ditt personvern og er forpliktet til å beskytte dine personopplysninger. 
               Denne personvernpolicyn forklarer hvordan vi samler inn, bruker, deler og beskytter dine personopplysninger når du bruker vår nettside.
             </p>
           </section>
@@ -94,7 +94,7 @@ export default function PersonvernPage() {
               Hvis du har spørsmål om denne personvernpolicyn eller ønsker å utøve dine rettigheter, kan du kontakte oss på:
             </p>
             <p className="text-gray-700 mb-4">
-              <strong>E-post:</strong> <a href="mailto:post@blusense.com" className="text-primary-600 hover:underline">post@blusense.com</a><br />
+              <strong>E-post:</strong> <a href="mailto:post@aquaenergyai.com" className="text-primary-600 hover:underline">post@aquaenergyai.com</a><br />
               <strong>Telefon:</strong> <a href="tel:+4790024636" className="text-primary-600 hover:underline">+47 900 24 636</a>
             </p>
           </section>
