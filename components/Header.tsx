@@ -18,7 +18,7 @@ export default function Header() {
                 <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-xl"></div>
               </div>
               <div className="flex flex-col">
-                <span className="text-xl font-bold text-gray-900 leading-tight group-hover:text-primary-600 transition-colors">Blusense</span>
+                <span className="text-xl font-bold text-gray-900 leading-tight group-hover:text-primary-600 transition-colors">AquaEnergy</span>
                 <span className="text-xs text-primary-600 font-semibold leading-tight">AI</span>
               </div>
             </Link>

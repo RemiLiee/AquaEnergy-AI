@@ -12,8 +12,3 @@ export default function AnalyticsWrapper() {
   );
 }
 
-
-
-
-
-

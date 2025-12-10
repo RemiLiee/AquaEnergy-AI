@@ -63,8 +63,3 @@ Google Analytics er nå aktivert! Data vil vises i Google Analytics dashboardet 
 **Trenger hjelp?** Sjekk Vercel docs: https://vercel.com/docs/concepts/projects/environment-variables
 
 
-
-
-
-
-

@@ -8,15 +8,15 @@ export default function Home() {
   const structuredData = JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Blusense AI",
-    "url": "https://blusense.com",
-    "logo": "https://blusense.com/logo.png",
+    "name": "AquaEnergy AI",
+    "url": "https://aquaenergyai.com",
+    "logo": "https://aquaenergyai.com/logo.png",
     "description": "Plug & Play sensorpakker + AI for energibesparelse i industrianlegg",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+47-900-24-636",
       "contactType": "customer service",
-      "email": "post@blusense.com",
+      "email": "post@aquaenergyai.com",
       "areaServed": "NO",
       "availableLanguage": "Norwegian"
     },
@@ -138,7 +138,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Blusense Dashboard
+              AquaEnergy Dashboard
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Innsikt i ditt anlegg
@@ -278,7 +278,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Hva man kan forvente med Blusense AI
+              Hva man kan forvente med AquaEnergy AI
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -316,17 +316,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Hvorfor velge Blusense AI - VS Section */}
+      {/* Hvorfor velge AquaEnergy AI - VS Section */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Hvorfor velge Blusense AI?
+              Hvorfor velge AquaEnergy AI?
             </h2>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <div className="bg-green-50 rounded-xl p-8 border-2 border-green-200">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Blusense AI</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">AquaEnergy AI</h3>
               <ul className="space-y-4">
                 <li className="flex items-start">
                   <svg className="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -418,7 +418,7 @@ export default function Home() {
             Klar til å starte?
           </h2>
           <p className="text-xl text-primary-100 mb-8">
-            Book en gratis pilot og se hvordan Blusense AI kan optimalisere ditt anlegg
+            Book en gratis pilot og se hvordan AquaEnergy AI kan optimalisere ditt anlegg
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link

@@ -59,8 +59,3 @@ Google Analytics er nå aktivert med Measurement ID: **G-LD8L95Q6JN**
 Data vil begynne å vises i Google Analytics dashboardet innen 24-48 timer.
 
 
-
-
-
-
-

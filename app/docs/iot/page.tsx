@@ -7,7 +7,7 @@ export default function IoTDocs() {
         <section className="mb-12">
           <h2 className="text-2xl font-semibold text-gray-900 mb-4">POST /api/ingest</h2>
           <p className="text-gray-600 mb-6">
-            Send sensordata til Blusense AI-plattformen. Dette endepunktet aksepterer JSON-data fra IoT-gateways.
+            Send sensordata til AquaEnergy AI-plattformen. Dette endepunktet aksepterer JSON-data fra IoT-gateways.
           </p>
 
           <h3 className="text-xl font-semibold text-gray-900 mb-3">Request Headers</h3>
@@ -110,11 +110,6 @@ X-API-Key: your-api-key-here (placeholder)`}
     </div>
   );
 }
-
-
-
-
-
 
 
 

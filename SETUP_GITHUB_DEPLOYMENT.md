@@ -52,8 +52,3 @@
 **For å manuelt trigge deploy:**
 - Gå til **Deployments** → **Create Deployment** → Velg `master` branch
 
-
-
-
-
-

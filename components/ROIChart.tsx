@@ -11,7 +11,7 @@ export default function ROIChart() {
       <div className="space-y-6">
         <div>
           <div className="flex justify-between items-center mb-2">
-            <span className="text-sm font-medium text-gray-700">Før Blusense AI</span>
+            <span className="text-sm font-medium text-gray-700">Før AquaEnergy AI</span>
             <span className="text-sm font-bold text-gray-900">100%</span>
           </div>
           <div className="w-full bg-gray-200 rounded-full h-8">
@@ -25,7 +25,7 @@ export default function ROIChart() {
         </div>
         <div>
           <div className="flex justify-between items-center mb-2">
-            <span className="text-sm font-medium text-gray-700">Etter Blusense AI</span>
+            <span className="text-sm font-medium text-gray-700">Etter AquaEnergy AI</span>
             <span className="text-sm font-bold text-green-600">{afterValue}%</span>
           </div>
           <div className="w-full bg-gray-200 rounded-full h-8">

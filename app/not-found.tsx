@@ -30,8 +30,3 @@ export default function NotFound() {
   );
 }
 
-
-
-
-
-
