@@ -1,6 +1,6 @@
-# AquaEnergy AI
+# Blusense AI
 
-Plug & Play energi- og driftoptimalisering for oppdrett med sanntids sensorovervåkning og AI-styrt energibesparelse.
+Plug & Play sensorpakker + AI for energibesparelse i industrianlegg. Sanntids overvåking og optimalisering for energibesparelse.
 
 ## 🚀 Features
 
@@ -28,7 +28,7 @@ Plug & Play energi- og driftoptimalisering for oppdrett med sanntids sensoroverv
 - LoRaWAN/4G gateway
 - **Pris**: 25 000 kr engangs + 2 990 kr/mnd
 
-### Sjøklar — Industri-pakke
+### Industri Pro -pakke
 - Industriell energimåler (MID/Modbus)
 - Industrial clamp-on flow
 - Optisk DO (industri)
@@ -79,7 +79,7 @@ npm start
 ## 📁 Project Structure
 
 ```
-AquaEnergy-AI/
+blusense-ai/
 ├── app/
 │   ├── api/
 │   │   └── ingest/        # IoT sensor data endpoint
@@ -137,7 +137,7 @@ Prosjektet er klart for Vercel deployment uten ekstra konfigurasjon.
 
 ## 📧 Kontakt
 
-info@aquaenergy.com
+post@blusense.com
 
 ## 📄 Lisens
 
