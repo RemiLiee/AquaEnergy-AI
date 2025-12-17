@@ -14,6 +14,8 @@ export default function PilotButton({ href, className, children, source = 'Unkno
   const [isLoading, setIsLoading] = useState(false);
 
   const handleClick = async (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault(); // Prevent immediate navigation
+    
     // Send e-post varsel
     setIsLoading(true);
     try {
@@ -51,8 +53,25 @@ export default function PilotButton({ href, className, children, source = 'Unkno
       });
     }
 
-    // Let the default link behavior continue (scroll to #contact)
-    // No need to preventDefault since we want the link to work normally
+    // Navigate after sending the notification
+    if (typeof window !== 'undefined') {
+      if (href.startsWith('#')) {
+        // If it's a hash link, scroll to it
+        setTimeout(() => {
+          const element = document.querySelector(href);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          } else if (href.startsWith('/#')) {
+            // If it's /#contact, navigate to / and then scroll
+            window.location.href = href;
+          } else {
+            window.location.hash = href;
+          }
+        }, 100);
+      } else {
+        window.location.href = href;
+      }
+    }
   };
 
   return (
