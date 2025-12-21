@@ -48,6 +48,11 @@ export default function Graph({ title, data, dataKey, unit, color = 'primary' }:
           const height = ((value - min) / range) * 100;
           const minHeight = 3; // Minimum height in pixels to ensure visibility
           const heightPercent = Math.max(height, minHeight);
+          const timestamp = data[index]?.timestamp;
+          const timeLabel = timestamp 
+            ? new Date(timestamp).toLocaleTimeString('no-NO', { hour: '2-digit', minute: '2-digit' })
+            : '';
+          const tooltipText = timeLabel ? `${value.toFixed(2)} ${unit} (${timeLabel})` : `${value.toFixed(2)} ${unit}`;
           return (
             <div
               key={index}
@@ -56,13 +61,7 @@ export default function Graph({ title, data, dataKey, unit, color = 'primary' }:
                 height: `${heightPercent}%`,
                 minHeight: `${minHeight}px`
               }}
-              title={(() => {
-                const timestamp = data[index]?.timestamp;
-                const timeLabel = timestamp 
-                  ? new Date(timestamp).toLocaleTimeString('no-NO', { hour: '2-digit', minute: '2-digit' })
-                  : '';
-                return timeLabel ? `${value.toFixed(2)} ${unit} (${timeLabel})` : `${value.toFixed(2)} ${unit}`;
-              })()}
+              title={tooltipText}
             />
           );
         })}
