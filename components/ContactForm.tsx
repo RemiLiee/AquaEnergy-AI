@@ -19,6 +19,8 @@ export default function ContactForm() {
     setError(null);
 
     try {
+      console.log('Sending contact form data:', formData);
+      
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
@@ -27,26 +29,35 @@ export default function ContactForm() {
         body: JSON.stringify(formData),
       });
 
+      console.log('Response status:', response.status);
+      console.log('Response headers:', Object.fromEntries(response.headers.entries()));
+
       const contentType = response.headers.get('content-type');
       let data;
       if (contentType && contentType.includes('application/json')) {
         data = await response.json();
+        console.log('Response data:', data);
       } else {
         const text = await response.text();
+        console.error('Non-JSON response:', text);
         throw new Error(text || 'Noe gikk galt');
       }
 
       if (!response.ok) {
         console.error('Contact form error:', data);
-        throw new Error(data.error || data.details || 'Noe gikk galt');
+        const errorMessage = data.error || data.details || 'Noe gikk galt';
+        setError(errorMessage);
+        throw new Error(errorMessage);
       }
 
+      console.log('Contact form submitted successfully!');
       setSubmitted(true);
       setFormData({ name: '', email: '', company: '', message: '' });
       setTimeout(() => setSubmitted(false), 5000);
     } catch (err) {
       console.error('Error submitting form:', err);
-      setError(err instanceof Error ? err.message : 'Noe gikk galt. Prøv igjen.');
+      const errorMessage = err instanceof Error ? err.message : 'Noe gikk galt. Prøv igjen.';
+      setError(errorMessage);
     } finally {
       setIsLoading(false);
     }

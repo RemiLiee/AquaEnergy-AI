@@ -63,3 +63,5 @@ Hvis deployment feiler:
 4. Sjekk at GitHub repository er riktig koblet
 
 
+
+

@@ -29,6 +29,7 @@ interface OptimizationPanelProps {
 export default function OptimizationPanel({ onImplementAction, implementedActions = [] }: OptimizationPanelProps) {
   const [data, setData] = useState<OptimizationData | null>(null);
   const [loading, setLoading] = useState(true);
+  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
 
   useEffect(() => {
     const fetchOptimization = async () => {
@@ -78,6 +79,18 @@ export default function OptimizationPanel({ onImplementAction, implementedAction
       default:
         return 'bg-gray-100 text-gray-800 border-gray-200';
     }
+  };
+
+  const toggleExpanded = (id: string) => {
+    setExpandedItems(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(id)) {
+        newSet.delete(id);
+      } else {
+        newSet.add(id);
+      }
+      return newSet;
+    });
   };
 
   return (
