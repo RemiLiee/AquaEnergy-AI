@@ -56,7 +56,13 @@ export default function Graph({ title, data, dataKey, unit, color = 'primary' }:
                 height: `${heightPercent}%`,
                 minHeight: `${minHeight}px`
               }}
-              title={`${value.toFixed(2)} ${unit} (${new Date(data[index]?.timestamp || 0).toLocaleTimeString('no-NO', { hour: '2-digit', minute: '2-digit' })})`}
+              title={(() => {
+                const timestamp = data[index]?.timestamp;
+                const timeLabel = timestamp 
+                  ? new Date(timestamp).toLocaleTimeString('no-NO', { hour: '2-digit', minute: '2-digit' })
+                  : '';
+                return timeLabel ? `${value.toFixed(2)} ${unit} (${timeLabel})` : `${value.toFixed(2)} ${unit}`;
+              })()}
             />
           );
         })}
